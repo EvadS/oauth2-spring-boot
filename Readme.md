@@ -19,3 +19,8 @@ resources -> shared конфиги (имя_сервиса.yml )
 
 Spring Netflix Zuul.
 forward requests to other services.
+
+возможно пондобиться 
+это первый шаг. При первом обращении к gateway мы увидим встроенное окно авторизации 
+      password: 1234 #password of the config-service
+      username: user #username of the config-service
