@@ -47,3 +47,12 @@ mongodb://se:123456@127.0.0.1:27017/my-database
 
 
  docker-compose -f  docker-compose-express.yml  up
+ 
+ 
+ ``` docker-compose -f mongo-compose-network.yml up ```
+ 
+ 
+docker-compose -f docker-compose-express.yml up
+
+Админ панель
+http://localhost:10081/db/admin/

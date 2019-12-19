@@ -1,21 +1,9 @@
-zuul:
-  ignoredServices: '*'
-  host:
-    connect-timeout-millis: 20000
-    socket-timeout-millis: 20000
-
-  routes:
-    auth-service:
-      path: /uaa/** #path that will be intercepted
-      url: auth-service #which url the request will e mapped to
-      stripPrefix: false #if zuul should replace the "/uaa/" segment
-      sensitiveHeaders:
-
-    account-service:
-      path: /accounts/**
-      serviceId: account-service
-      stripPrefix: false
-      sensitiveHeaders:
-
-server:
-  port: 8080
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+      password: 1234
+      username: user
