@@ -1,0 +1,14 @@
+version: '3'
+services:
+ my-mongodb:
+        image: mongo:latest
+        container_name: "my-container-mongodb"
+        environment:
+           MONGO_INITDB_DATABASE: my-database
+           MONGO_INITDB_USERNAME: se
+           MONGO_INITDB_PASSwORD: 123456
+
+        volumes:
+           - ./mongo-volume:/data/db
+        ports:
+            - 27017:27017
