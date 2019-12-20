@@ -1,5 +1,4 @@
-package com.se.sample.authservice.dto;
-
+package com.se.example.accountservice.dto;
 
 import java.io.Serializable;
 

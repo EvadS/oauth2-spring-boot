@@ -1,5 +1,6 @@
 package com.se.sample.authservice.repository;
 
+
 import com.se.sample.authservice.domain.AuthClientDetails;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;

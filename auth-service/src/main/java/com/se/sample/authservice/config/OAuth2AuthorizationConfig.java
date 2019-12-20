@@ -1,7 +1,7 @@
 package com.se.sample.authservice.config;
 
 
-import com.se.sample.authservice.config.mongodb.changelogs.MongoTokenStore;
+import com.se.sample.authservice.config.mongodb.MongoTokenStore;
 import com.se.sample.authservice.service.AuthClientDetailsService;
 import com.se.sample.authservice.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -31,7 +31,7 @@ public class InitialValuesChangeLog {
      * create a User for us to be able to authenticate him with the same password we used before for browser client.
      * @param mongoTemplate
      */
-    @ChangeSet(order = "002", id = "insertUserToTestAuthentication", author = "Marcus Hert Da Corégio")
+    @ChangeSet(order = "002", id = "insertUserToTestAuthentication", author = "se")
     public void insertUserToTestAuthentication(MongoTemplate mongoTemplate) {
         Set<Authorities> authorities = new HashSet<>();
         authorities.add(Authorities.ROLE_USER);
@@ -43,6 +43,21 @@ public class InitialValuesChangeLog {
         user.setUsername("randomuser");
 
         mongoTemplate.save(user);
+    }
+
+    /**
+     * we need to register it as a client for our auth service.
+     * @param mongoTemplate
+     */
+    @ChangeSet(order = "003", id = "insertAccountServiceClientDetails", author = "se")
+    public void insertAccountServiceClientDetails(MongoTemplate mongoTemplate) {
+        AuthClientDetails accountServiceClientDetails = new AuthClientDetails();
+        accountServiceClientDetails.setClientId("account-service");
+        accountServiceClientDetails.setClientSecret("$2a$10$fWNTd3H.u7G/aNROVQSifebOkZ2xzU5nUPOCI2Ld42M8E25/ljJqK");
+        accountServiceClientDetails.setScopes("server");
+        accountServiceClientDetails.setGrantTypes("refresh_token,client_credentials");
+
+        mongoTemplate.save(accountServiceClientDetails);
     }
 
 }
