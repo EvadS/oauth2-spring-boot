@@ -1,5 +1,4 @@
-package com.se.sample.authservice.config.mongodb.changelogs;
-
+package com.se.sample.authservice.config.mongodb;
 
 import com.se.sample.authservice.domain.MongoAccessToken;
 import com.se.sample.authservice.domain.MongoRefreshToken;
